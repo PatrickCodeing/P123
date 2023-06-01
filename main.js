@@ -3,6 +3,7 @@ noseY=0;
 
 function preload(){
     moustache = loadImage('https://i.postimg.cc/3x3QzSGq/m.png');
+    lipstick = loadImage('https://i.postimg.cc/PxFvYgkv/l1.png');
 }
 
 function setup(){
@@ -18,7 +19,13 @@ function setup(){
 
 function draw(){
     image(video, 0, 0, 300, 300);
+
+    if(document.getElementById("gender").value == "boy"){
     image(moustache, noseX-15, noseY, 35, 35);
+    }
+    else{
+     image(lipstick,noseX-15, noseY+5, 35, 35);          
+    }
 }
 
 function take_snapshot(){
